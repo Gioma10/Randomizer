@@ -15,8 +15,10 @@ function App() {
     
       {!isStarted ? 
         <div className="h-screen flex flex-col justify-center items-center gap-4">
-          <h1 className="text-8xl">Dubbio !?</h1>
-          <Button selectStart={handleStart}> Inizia </Button>
+          <h1 className="text-6xl">Dubbio !?</h1>
+          <Button selectStart={handleStart}>
+            Inizia
+          </Button>
         </div> 
         :
         <Randomizer selectStart={handleStart}/>

@@ -9,6 +9,10 @@
     font-family: p;
     src: url('./fonts/comica_bd/ComicaBD-BoldItalic.ttf');
 }
+@font-face {
+    font-family: si;
+    src: url('./fonts/comica_bd/ComicaBD-Regular.ttf');
+}
 
 h1{
     font-family: h1;
