@@ -126,7 +126,7 @@ export default function Randomizer({ selectStart }: { selectStart: () => void })
         </Button>
       </div>
       :
-          <WinnerItem onHome={selectStart} onRestart={handleRefresh} item={chooseItem}/>
+        <WinnerItem onHome={selectStart} onRestart={handleRefresh} item={chooseItem}/>
       }
     </>
   );
