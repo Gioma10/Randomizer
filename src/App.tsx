@@ -15,7 +15,7 @@ function App() {
     
       {!isStarted ? 
         <div className="h-screen flex flex-col gap-4 justify-center items-center ">
-            <h1 className="text-6xl">Dubbio !?</h1>
+            <h1 className="text-6xl md:text-9xl">Dubbio !?</h1>
             <Button handleSelect={handleStart}>
               Inizia
             </Button>

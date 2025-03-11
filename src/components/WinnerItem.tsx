@@ -45,8 +45,8 @@ const WinnerItem :React.FC<WinnerProps>=({item, onHome, onRestart})=>{
             :
             <div className="flex justify-center items-center h-full flex-col gap-4">
                 <div className="flex flex-col justify-center items-center winner !!!">
-                    <p className=" text-6xl winner py-1 px-5 rounded-4xl ">{item[0]}</p>
-                    <p>Dubbio risolto !?</p>
+                    <p className=" text-6xl md:text-9xl winner py-1 px-5 rounded-4xl ">{item[0]}</p>
+                    <p className="text-base md:text-2xl">Dubbio risolto !?</p>
                 </div>
                 <div className="flex gap-2 text-xs">
                     <Button handleSelect={onHome}>

@@ -67,29 +67,31 @@ export default function Randomizer({ selectStart }: { selectStart: () => void })
           </Button>
         </div>
         {/* Contenitore elementi in dubbio  */}
-        <div className="w-1/2 bg-amber-200 min-h-32 max-h-44 flex border rounded-2xl relative shadow-[4px_4px_0px_black]">
+        <div className="w-2/3 bg-amber-200 min-h-32 max-h-44 flex border rounded-2xl relative shadow-[4px_4px_0px_black]">
             <div
-              className={`overflow-y-scroll flex flex-wrap  p-5`}
+              className={`overflow-y-scroll flex flex-wrap gap-4 p-5`}
               ref={containerRef} // Aggiungi il riferimento qui
             >
               {randomItems.map((item: string, index: number) => {
                 return(
                       <motion.div
                           key={index}
-                          className='relative px-3 py-2 rounded-2xl text-sm flex justify-center items-center cursor-pointer -z-0'
+                          className='relative rounded-2xl text-sm flex justify-center items-center cursor-pointer -z-0'
                           whileHover="hover" // Quando il cursore è sopra, attiva l'animazione con la variante "hover"
                           onClick={()=>handleDelete(index)}>
                               <motion.p
                                   variants={{
                                       initial: { y: 0, opacity: 0 },
-                                      hover: { y: -20, opacity: 1 }, // L'animazione si attiva quando il padre ha "hover"
+                                      hover: { y: -22, opacity: 1 }, // L'animazione si attiva quando il padre ha "hover"
                                   }}
                                   initial={{ y: 0, opacity: 0 }}
                                   transition={{ease: 'easeOut', duration: 0.1, type:'spring', stiffness:400}}
                                   className="absolute text-red-600 ">
                                       Elimina
                               </motion.p>
-                              <Button >{item}</Button>
+                              <Button >
+                                <p className="text-sm">{item}</p>
+                              </Button>
                     </motion.div>
               )})}
             </div>
@@ -109,7 +111,7 @@ export default function Randomizer({ selectStart }: { selectStart: () => void })
             transition={{ duration: 0.3 }}
             placeholder="Inserisci qualcosa"
             type="text"
-            className={`py-1 px-3 outline-none border ${errorInput ? 'border-red-600 shadow-[3px_3px_0px_red]' : 'border-black shadow-[3px_3px_0px_black]'} rounded-4xl bg-amber-200`}
+            className={`text-base md:text-xl py-1 px-3 outline-none border ${errorInput ? 'border-red-600 shadow-[3px_3px_0px_red]' : 'border-black shadow-[3px_3px_0px_black]'} rounded-4xl bg-amber-200`}
             value={input}
             onChange={handleChange}
           />
