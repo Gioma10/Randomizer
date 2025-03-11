@@ -2,11 +2,11 @@ import { motion } from "motion/react";
 import React from "react";
 
 interface ButtonProps {
-    selectStart?: () => void,
+    handleSelect?: () => void,
     children: any,
 }
 
-const Button: React.FC<ButtonProps> = ({selectStart, children})=>{
+const Button: React.FC<ButtonProps> = ({handleSelect, children})=>{
     return (
         <motion.div 
             whileHover='hover'
@@ -15,7 +15,7 @@ const Button: React.FC<ButtonProps> = ({selectStart, children})=>{
                 <motion.button
                     variants={buttonVariants}
                     initial={ {y:-3, x:-3}}
-                    onClick={selectStart}
+                    onClick={handleSelect}
                     className=" bg-[#fee685] border py-1 px-3 rounded-4xl text-sm cursor-pointer">
                         {children}
                 </motion.button>
